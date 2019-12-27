@@ -2,10 +2,19 @@
     <string name="app_name">signupandregister</string>
     <string name="ProbeID">Probe ID</string>
     <string name="pwd">Password</string>
+    <string name="gender">Gender</string>
+    <string name="yearofstudy">Year Of Study</string>
+    <string name="department">Department</string>
+    <string name="collegename">College Name</string>
+    <string name="confirmpwd">Confirm password</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="acconeeded">Accomodation Needed?</string>
+    <string name="email">Email ID</string>
     <string name="fgtpwd"><u>Forgot your password?</u></string>
-    <string name="register">Don\'t have a Probe account? Register here</string>
+    <string name="register"><u>Don\'t have a Probe account? Register here</u></string>
     <string name="signin">Sign In</string>
-
+    <string name="regsuccess">Registration \n\n Successful!</string>
+    <string name="checkemail">Please check your email for your Probe ID</string>
 
 
 </resources>

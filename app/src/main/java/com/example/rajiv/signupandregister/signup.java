@@ -1,5 +1,6 @@
 package com.example.rajiv.signupandregister;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.support.design.widget.TextInputEditText;
@@ -13,6 +14,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
+
+
 public class signup extends AppCompatActivity {
    TextInputEditText tl2,tl4;
    TextInputLayout tl1,tl3;
@@ -25,58 +28,37 @@ public class signup extends AppCompatActivity {
         tl2=(TextInputEditText) findViewById(R.id.prb2);
         tl3=(TextInputLayout) findViewById(R.id.prb3);
         tl4=(TextInputEditText) findViewById(R.id.prb4);
-        tl2.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-            }
+        tl2.setOnFocusChangeListener(new custom_focus_change_listen(tl1,tl2));
+        tl4.setOnFocusChangeListener(new custom_focus_change_listen(tl3,tl4));
 
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().isEmpty())
-                    tl1.setDefaultHintTextColor(ColorStateList.valueOf(Color.rgb(0,0,0)));
-                else
-                    tl1.setDefaultHintTextColor(ColorStateList.valueOf(Color.rgb(255,255,255)));
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        tl4.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(charSequence.toString().isEmpty())
-                    tl3.setDefaultHintTextColor(ColorStateList.valueOf(Color.rgb(0,0,0)));
-                else
-                    tl3.setDefaultHintTextColor(ColorStateList.valueOf(Color.rgb(255,255,255)));
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-
-
+        tl2.addTextChangedListener(new clr_err(tl1,tl2));
+        tl4.addTextChangedListener(new clr_err(tl3,tl4));
     }
     public void pwdfgtfn(View view)
     {
-        Log.i("ck","dcnk");
+        Intent fgt_pwd=new Intent(this,forgetpwd.class);
+        startActivity(fgt_pwd);
     }
     public void regfn(View view)
     {
-        Log.i("knc","csmk");
+         Intent gotoreg=new Intent(this,register.class);
+         startActivity(gotoreg);
     }
     public void signinfn(View view)
     {
         Log.i("knc","csmk");
+        if(tl2.getText().toString().isEmpty())
+        {
+            tl2.setError("Compulsory Field");
+            tl2.setBackgroundResource(R.drawable.round_corner_button_error);
+        }
+        if(tl4.getText().toString().isEmpty())
+        {
+            tl4.setError("Compulsory Field");
+            tl4.setBackgroundResource(R.drawable.round_corner_button_error);
+        }
+
     }
 
 }
