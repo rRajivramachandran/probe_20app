@@ -19,6 +19,7 @@ public class NavigationBar extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private static FragmentManager fragmentManager;
     private NavigationView navigationView;
+    Thread thread;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,43 +40,49 @@ public class NavigationBar extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                int id = menuItem.getItemId();
-                switch(id){
-                    case R.id.about_us:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new AboutUsFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.sponsors:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new SponsorsFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.contacts:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new ContactUsFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.schedule:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new ScheduleFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.live_updates:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new LiveUpdatesFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.profile:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new ProfileFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                        break;
-                    case R.id.map:
-                        fragmentManager.beginTransaction().replace(R.id.fragment_container,new MapFragment(),null).commit();
-                        drawerLayout.closeDrawer(Gravity.LEFT,true);
-                }
-                Toast.makeText(getApplicationContext(),"Item touched is " + id,Toast.LENGTH_SHORT).show();
-                return true;
+        thread = new Thread() {
+
+            public void run() {
+                navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                        int id = menuItem.getItemId();
+                        switch (id) {
+                            case R.id.about_us:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new AboutUsFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.sponsors:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new SponsorsFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.contacts:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new ContactUsFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.schedule:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new ScheduleFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.live_updates:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new LiveUpdatesFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.profile:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new ProfileFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                                break;
+                            case R.id.map:
+                                fragmentManager.beginTransaction().replace(R.id.fragment_container, new MapFragment(), null).commit();
+                                drawerLayout.closeDrawer(Gravity.LEFT, true);
+                        }
+                        //Toast.makeText(getApplicationContext(), "Item touched is " + id, Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                });
             }
-        });
+        };
+        thread.start();
     }
 
     @Override

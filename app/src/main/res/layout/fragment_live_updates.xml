@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     tools:context=".LiveUpdatesFragment"
     android:orientation="vertical"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="@drawable/rectangle1">
 
     <LinearLayout
         android:layout_width="match_parent"

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".schedule.Day1"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/rectangle1">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="match_parent"
         android:text="Day 1"
         android:textSize="64dp"
+        android:textColor="@color/white"
         android:gravity="center" />
 
 </LinearLayout>

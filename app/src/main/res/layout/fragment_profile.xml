@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:background="@drawable/rectangle1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +29,8 @@
             android:text="WILL BE UPDATED AS THE END POINTS ARE AVAILABLE"
             android:gravity="center"
             android:layout_marginTop="32dp"
-            android:textSize="20dp"></TextView>
+            android:textSize="20dp"
+            android:textColor="@color/white"></TextView>
     </LinearLayout>
 
 </ScrollView>

@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapFragment">
+    tools:context=".MapFragment"
+    android:background="@drawable/rectangle1">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +29,7 @@
             android:text="WILL BE ADDED WHEN THE REMAINING APP IS COMPLETE"
             android:gravity="center"
             android:layout_marginTop="32dp"
-            android:textSize="20dp"></TextView>
+            android:textSize="20dp"
+            android:textColor="@color/white"></TextView>
     </LinearLayout>
 </RelativeLayout>
