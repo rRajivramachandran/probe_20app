@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/profile"
+                android:icon="@drawable/path_3"
+                android:title="Profile"></item>
+
+            <item
+                android:id="@+id/schedule"
+                android:icon="@drawable/path_4"
+                android:title="Schedule"></item>
+
+            <item
+                android:id="@+id/live_updates"
+                android:icon="@drawable/path_5"
+                android:title="Live Updates"></item>
+
+            <item
+                android:id="@+id/map"
+                android:icon="@drawable/path_6"
+                android:title="Map"></item>
+        </menu>
+    </item>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/about_us"
+                android:icon="@drawable/path_7"
+                android:title="About Us"></item>
+
+            <item
+                android:id="@+id/sponsors"
+                android:icon="@drawable/path_8"
+                android:title="Sponsors"></item>
+
+            <item
+                android:id="@+id/contacts"
+                android:icon="@drawable/path_9"
+                android:title="Contacts"></item>
+        </menu>
+    </item>
+
+</menu>

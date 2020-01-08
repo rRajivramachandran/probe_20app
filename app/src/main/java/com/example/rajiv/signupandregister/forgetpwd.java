@@ -16,7 +16,6 @@ public class forgetpwd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgetpwd);
-
         id_txt=(TextInputEditText) findViewById(R.id.id_txt);
         pwd_txt=(TextInputEditText) findViewById(R.id.pwd_text);
         cnfpwd_txt=(TextInputEditText) findViewById(R.id.cnfpwd_text);

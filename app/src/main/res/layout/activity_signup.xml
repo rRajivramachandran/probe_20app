@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".signup"
     android:orientation="vertical"
-    android:background="@drawable/untitledproject_1">
+    android:background="@drawable/group14">
 
     <ImageView
         android:layout_width="match_parent"

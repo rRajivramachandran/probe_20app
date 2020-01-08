@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".schedule.Day0"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Day 0"
+        android:textSize="64dp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+
+</LinearLayout>
