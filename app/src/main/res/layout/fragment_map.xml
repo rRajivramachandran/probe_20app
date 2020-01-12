@@ -12,7 +12,9 @@
         android:layout_height="match_parent" />
     <TextView
         android:layout_marginTop="60dp"
-        android:layout_width="80dp"
+        android:layout_width="match_parent"
+        android:background="#80000000"
+        android:padding="10dp"
         android:id="@+id/request_loc_press"
         style="@style/whiteonblack"
         android:text="@string/scrolltochoose"

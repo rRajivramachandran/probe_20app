@@ -62,6 +62,7 @@ public class MapFragment extends Fragment implements maprecycleclicklistener{
         View rootView = inflater.inflate(R.layout.fragment_map, container, false);
         req_loc_sel=(TextView) rootView.findViewById(R.id.request_loc_press);
         mMapView = (MapView) rootView.findViewById(R.id.mapView);
+
         mMapView.onCreate(savedInstanceState);
         rec_view=(RecyclerView) rootView.findViewById(R.id.rec_lay);
         layoutManager = new LinearLayoutManager(getContext());
@@ -90,7 +91,7 @@ public class MapFragment extends Fragment implements maprecycleclicklistener{
         lat_lng_lis.add(new LatLng(10.759315,78.813209));
         lat_lng_lis.add(new LatLng(10.757763,78.813066));
         lat_lng_lis.add(new LatLng(10.759680,78.810932));
-
+        req_loc_sel.getBackground().setAlpha(45);
 
 
 
@@ -192,6 +193,7 @@ public class MapFragment extends Fragment implements maprecycleclicklistener{
     {
         googleMap.clear();
         googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lat_lng_lis.get(pos), 15));
+
         googleMap.addMarker(new MarkerOptions().position(lat_lng_lis.get(pos)).title(mylocations[pos]));
     }
     @Override
