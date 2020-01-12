@@ -3,9 +3,9 @@ package com.example.rajiv.signupandregister;
 import com.example.rajiv.signupandregister.schedule.Day0;
 import com.example.rajiv.signupandregister.schedule.Day1;
 import com.example.rajiv.signupandregister.schedule.Day2;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 
 public class PagerAdapter extends FragmentStatePagerAdapter {

@@ -22,7 +22,7 @@
         android:textSize="30dp"
         android:layout_marginBottom="10dp"
         android:orientation="horizontal"/>
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
 
             android:layout_marginTop="20dp"
@@ -35,7 +35,7 @@
             android:textColorHint="#000000"
             android:id="@+id/namelayout"
             android:layout_marginLeft="10dp">
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:imeOptions="actionNext"
@@ -52,11 +52,11 @@
 
 
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_marginTop="15dp"
             android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
             android:id="@+id/emaillayout"
             app:errorTextAppearance="@style/Texterror"
             android:layout_marginLeft="10dp">
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -82,10 +82,10 @@
                 android:gravity="center_vertical"
 
                 />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_marginTop="15dp"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
             android:id="@+id/pwdlayout"
             app:errorTextAppearance="@style/Texterror"
             android:layout_marginLeft="10dp">
-            <android.support.design.widget.TextInputEditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
@@ -113,9 +113,9 @@
                 android:gravity="center_vertical"
 
                 />
-</android.support.design.widget.TextInputLayout>
+</com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_marginTop="15dp"
                 android:layout_height="wrap_content"
@@ -127,7 +127,7 @@
                 android:id="@+id/cnfpwdlayout"
                 app:errorTextAppearance="@style/Texterror"
                 android:layout_marginLeft="10dp">
-                <android.support.design.widget.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="50dp"
@@ -142,7 +142,7 @@
                     android:gravity="center_vertical"
 
                     />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 <TextView
     android:layout_width="match_parent"
@@ -187,7 +187,7 @@
 
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
@@ -199,7 +199,7 @@
         android:id="@+id/yearofstudylayout"
         app:errorTextAppearance="@style/Texterror"
         android:layout_marginLeft="10dp">
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -215,10 +215,10 @@
             android:gravity="center_vertical"
 
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
@@ -230,7 +230,7 @@
         android:id="@+id/deptlayout"
         app:errorTextAppearance="@style/Texterror"
         android:layout_marginLeft="10dp">
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -246,10 +246,10 @@
             android:gravity="center_vertical"
 
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
@@ -261,7 +261,7 @@
         android:id="@+id/clglayout"
         app:errorTextAppearance="@style/Texterror"
         android:layout_marginLeft="10dp">
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -277,10 +277,10 @@
             android:gravity="center_vertical"
 
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
@@ -292,7 +292,7 @@
         android:id="@+id/phnolayout"
         app:errorTextAppearance="@style/Texterror"
         android:layout_marginLeft="10dp">
-        <android.support.design.widget.TextInputEditText
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -307,7 +307,7 @@
             android:gravity="center_vertical"
 
             />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="match_parent"

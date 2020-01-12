@@ -6,30 +6,24 @@
     tools:context=".MapFragment"
     android:background="@drawable/rectangle1">
 
-    <LinearLayout
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp">
+        android:layout_height="match_parent" />
+    <TextView
+        android:layout_marginTop="60dp"
+        android:layout_width="80dp"
+        android:id="@+id/request_loc_press"
+        style="@style/whiteonblack"
+        android:text="@string/scrolltochoose"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="80dp"
+        android:layout_marginTop="10dp"
+        android:background="#000000"
+        android:layout_below="@id/request_loc_press"
+        android:layout_height="300dp"
+        android:id="@+id/rec_lay">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/map_1"
-            android:layout_gravity="center"></ImageView>
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rectangle15"
-            android:layout_gravity="center"
-            android:layout_marginTop="3dp"></ImageView>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="WILL BE ADDED WHEN THE REMAINING APP IS COMPLETE"
-            android:gravity="center"
-            android:layout_marginTop="32dp"
-            android:textSize="20dp"
-            android:textColor="@color/white"></TextView>
-    </LinearLayout>
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>

@@ -2,8 +2,8 @@ package com.example.rajiv.signupandregister;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.support.design.widget.TextInputEditText;
-import android.support.design.widget.TextInputLayout;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import android.util.Log;
 import android.view.View;
 
