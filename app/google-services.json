@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "374023054984",
+    "firebase_url": "https://probe20app.firebaseio.com",
+    "project_id": "probe20app",
+    "storage_bucket": "probe20app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374023054984:android:7e7c9cc9542c28ce34613d",
+        "android_client_info": {
+          "package_name": "com.example.rajiv.signupandregister"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374023054984-37dtti3ck7q5hb0bnih6ipd0qg8p4sbd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rajiv.signupandregister",
+            "certificate_hash": "11db4bcdcc3bfe3ffcc7f230f450bc290f52ed8b"
+          }
+        },
+        {
+          "client_id": "374023054984-cq3erap7tjho4t167cl4uje4o2mnqtn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkC2ZuOmY72yVxsCLFyqZpnLgluWcaSyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374023054984-cq3erap7tjho4t167cl4uje4o2mnqtn3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

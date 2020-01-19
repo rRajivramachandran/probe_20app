@@ -6,12 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
+public class MapAdapter extends RecyclerView.Adapter<MapAdapter.MyViewHolder>  {
     private String[] mDataset;
     private maprecycleclicklistener rcl;
     // Provide a reference to the views for each data item
@@ -29,7 +27,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>  {
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(String[] myDataset,maprecycleclicklistener mp) {
+    public MapAdapter(String[] myDataset, maprecycleclicklistener mp) {
         mDataset = myDataset;
         rcl=mp;
     }

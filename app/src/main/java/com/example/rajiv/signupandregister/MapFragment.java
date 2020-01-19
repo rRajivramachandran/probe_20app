@@ -24,8 +24,6 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
-import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -69,7 +67,7 @@ public class MapFragment extends Fragment implements maprecycleclicklistener{
         rec_view.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new MyAdapter(mylocations,this);
+        mAdapter = new MapAdapter(mylocations,this);
         rec_view.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
         lat_lng_lis.add(new LatLng(10.766860,78.816602));

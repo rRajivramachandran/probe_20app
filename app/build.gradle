@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     compileSdkVersion 28
@@ -9,6 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        packagingOptions {
+            exclude 'META-INF/services/javax.annotation.processing.Processor'
+        }
     }
     buildTypes {
         release {
@@ -30,4 +34,16 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
+
+
+
+}
+
+buildscript {
+    dependencies {
+        //classpath 'com.google.gms:google-services:4.2.0'
+
+
+        //classpath 'com.google.gms:google-services:4.3.3'
+    }
 }

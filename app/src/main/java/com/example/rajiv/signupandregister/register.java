@@ -1,16 +1,27 @@
 package com.example.rajiv.signupandregister;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+
+import com.google.android.gms.common.api.Api;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
+import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -20,6 +31,7 @@ public class register extends AppCompatActivity {
     TextInputLayout name_lay,email_lay,pwd_lay,cnf_pwd_lay,yr_of_study_lay,dept_name_lay,clg_name_lay,ph_no_lay;
     RadioGroup gender_txt,acco_txt;
     CheckBox male_txt,female_txt,other_txt,acco_y_txt,acco_n_txt;
+    Spinner spin;
     ArrayList<ArrayList<CheckBox>>  cboxs=new ArrayList<ArrayList<CheckBox>>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +52,7 @@ public class register extends AppCompatActivity {
         acco_n_txt = (CheckBox) findViewById(R.id.accobox2);
         gender_txt = (RadioGroup) findViewById(R.id.genderradgrp);
         acco_txt = (RadioGroup) findViewById(R.id.accordgrp);
-
+        spin=(Spinner) findViewById(R.id.wait_spin);
         name_lay = (TextInputLayout) findViewById(R.id.namelayout);
         email_lay = (TextInputLayout) findViewById(R.id.emaillayout);
         pwd_lay = (TextInputLayout) findViewById(R.id.pwdlayout);
@@ -70,7 +82,7 @@ public class register extends AppCompatActivity {
 
         cboxs.add(new ArrayList<CheckBox> (Arrays.asList(new CheckBox[] {male_txt,female_txt,other_txt})));
         cboxs.add(new ArrayList<CheckBox> (Arrays.asList(new CheckBox[] {acco_y_txt,acco_n_txt})));
-
+        //spin.setVisibility(View.GONE);
         for(ArrayList<CheckBox> cb:cboxs)
         {
             for(CheckBox cx:cb)
@@ -127,10 +139,63 @@ public class register extends AppCompatActivity {
             cnf_pwd_txt.setError("Password and Confirm pwd dont match");
             p=false;
         }
-        if(p)
+        if(ph_no_txt.getText().toString().length()!=10)
         {
-            Intent success_reg=new Intent(this,success_reg.class);
-            startActivity(success_reg);
+            p=false;
+            ph_no_txt.setError("Must contain 10 digits");
+        }
+        if(p) //all fields valid
+        {
+            String gender,acco_needed;
+            if(female_txt.isChecked())
+                gender="Female";
+            else if(male_txt.isChecked())
+                gender="Male";
+            else
+                gender="Other";
+            if(acco_y_txt.isChecked())
+                acco_needed="Yes";
+            else
+                acco_needed="No";
+            String[] params={name_txt.getText().toString(),email_txt.getText().toString(),pwd_txt.getText().toString(),
+            gender,yr_of_study_txt.getText().toString(),dept_name_txt.getText().toString(),clg_name_txt.getText().toString(),ph_no_txt.getText().toString()};
+            spin.setVisibility(View.VISIBLE);
+
+                    register_api_class.getClient().registration(params[0],
+                            params[1],params[2],params[3],params[4],params[5],params[6],params[7]
+                            , new Callback<registration_pojo>() {
+                                @Override
+                                public void success(registration_pojo signUpResponse, Response response) {
+                                    // in this method we will get the response from API
+                                    spin.setVisibility(View.GONE);
+                                    if(!signUpResponse.getMessage().equals("Registration Successful!"))
+                                    {Toast t = Toast.makeText(register.this,signUpResponse.getMessage(),Toast.LENGTH_LONG);
+                                     t.setGravity(Gravity.CENTER,0,0);
+                                     Log.i("retro","server reached "+signUpResponse.getMessage()+" "+signUpResponse.getStatus());
+                                     t.show();}
+                                    else
+                                    {
+                                        Intent success_reg=new Intent(register.this,success_reg.class);
+                                        startActivity(success_reg);
+                                    }
+
+                                }
+
+
+
+                                @Override
+                                public void failure(RetrofitError error) {
+                                    // if error occurs in network transaction then we can get the error in this method.
+                                    Toast t = Toast.makeText(register.this,"Network Error",Toast.LENGTH_LONG);
+                                    Log.i("retro",error.getMessage().toString());
+                                    t.setGravity(Gravity.CENTER,0,0);
+                                    t.show();
+                                }
+                            });
+
+
+
+
         }
 
     }

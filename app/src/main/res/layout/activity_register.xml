@@ -78,7 +78,7 @@
                 android:paddingLeft="10dp"
                 android:imeOptions="actionNext"
                 android:background="@drawable/roundcornerbutton"
-                android:inputType="text"
+                android:inputType="textEmailAddress"
                 android:gravity="center_vertical"
 
                 />
@@ -208,7 +208,7 @@
             android:id="@+id/yearofstudytext"
             android:paddingLeft="10dp"
             android:background="@drawable/roundcornerbutton"
-            android:inputType="text"
+            android:inputType="number"
             android:imeOptions="actionNext"
             android:focusable="true"
             android:focusableInTouchMode="true"
@@ -300,8 +300,9 @@
             android:hint="@string/phonenumber"
             android:id="@+id/phnotext"
             android:paddingLeft="10dp"
+            android:maxLength="10"
             android:background="@drawable/roundcornerbutton"
-            android:inputType="text"
+            android:inputType="phone"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:gravity="center_vertical"
@@ -358,6 +359,12 @@
         android:padding="4dp"
         android:layout_marginBottom="30dp"
         android:textColor="#000000" />
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/wait_spin"
+        />
 
 </LinearLayout>
 </ScrollView>

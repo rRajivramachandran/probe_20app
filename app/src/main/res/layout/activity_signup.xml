@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:hint="@string/ProbeID"
+            android:hint="@string/email"
             android:focusedByDefault="false"
             android:inputType="text"
             android:imeOptions="actionNext"
