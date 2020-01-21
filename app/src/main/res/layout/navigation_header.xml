@@ -1,41 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/black">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/logo"></ImageView>
+            android:background="@drawable/logo"
+            />
+
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="35dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="10dp">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/harishrajdr"></ImageView>
-                <ImageView
-                    android:layout_width="wrap_content"
+                >
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/probe007"></ImageView>
+                    android:text="Harish Raj.D.R"
+                    android:id="@+id/user_name"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="PROBE200016"
+                    android:id="@+id/probeid"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp"/>
+
+
             </LinearLayout>
 
-        <ImageView
+        <Button
+
             android:layout_width="wrap_content"
+            android:id="@+id/logout"
+            android:onClick="logout"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/path_10"></ImageView>
+            android:layout_marginLeft="90dp"
+            android:background="@drawable/path_10"></Button>
     </LinearLayout>
 
 

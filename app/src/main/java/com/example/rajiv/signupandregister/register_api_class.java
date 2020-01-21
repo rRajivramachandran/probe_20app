@@ -7,7 +7,7 @@ public class register_api_class {
 
         // change your base URL
         RestAdapter adapter = new RestAdapter.Builder()
-                .setEndpoint("https://probe.org.in/20/api") //Set the Root URL
+                .setEndpoint("http://192.168.43.96:8000/20/api") //Set the Root URL
                 .build(); //Finally building the adapter
 
         //Creating object for our interface

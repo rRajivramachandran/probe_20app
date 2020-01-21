@@ -56,58 +56,6 @@
 
 
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
-            android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            android:layout_marginRight="10dp"
-            android:focusableInTouchMode="true"
-            app:hintTextAppearance="@style/TextAppearancewhite"
-            android:textColorHint="#000000"
-            android:id="@+id/pwd_layout"
-            app:errorTextAppearance="@style/Texterror"
-            android:layout_marginLeft="10dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:hint="@string/pwd"
-                android:id="@+id/pwd_text"
-                android:nextFocusForward="@+id/cnfpwd_text"
-                android:paddingLeft="10dp"
-                android:imeOptions="actionNext"
-                android:background="@drawable/roundcornerbutton"
-                android:inputType="textPassword"
-                android:gravity="center_vertical"
-
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="15dp"
-            android:layout_height="wrap_content"
-            app:errorEnabled="true"
-            android:layout_marginRight="10dp"
-            android:focusableInTouchMode="true"
-            app:hintTextAppearance="@style/TextAppearancewhite"
-            android:textColorHint="#000000"
-            android:id="@+id/cnfpwd_layout"
-            app:errorTextAppearance="@style/Texterror"
-            android:layout_marginLeft="10dp">
-            <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:hint="@string/confirmpwd"
-                android:id="@+id/cnfpwd_text"
-                android:paddingLeft="10dp"
-                android:imeOptions="actionDone"
-                android:background="@drawable/roundcornerbutton"
-                android:inputType="textPassword"
-                android:gravity="center_vertical"
-
-                />
             <Button
                 android:layout_width="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -118,6 +66,6 @@
                 android:onClick="forgetpwdentry"
                 android:text="Change"
                 android:textColor="#000000" />
-        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 </ScrollView>

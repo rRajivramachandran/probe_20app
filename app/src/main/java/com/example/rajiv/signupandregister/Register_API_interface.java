@@ -28,5 +28,8 @@ public interface Register_API_interface {
     @GET("/events")
     public void getevents(
                       Callback<schedule_pojo> callback);
+    @FormUrlEncoded
+    @POST("/forgotPassword")
+    public void forgotPassword(@Field("email") String email,Callback<login_pojo> callback);
 
 }

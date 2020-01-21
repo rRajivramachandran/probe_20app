@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="">
-        <menu>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item android:title=""
+        >
+        <menu
+            >
             <item
                 android:id="@+id/profile"
                 android:icon="@drawable/path_3"
-                android:title="Profile"></item>
+                android:title="Profile"
+
+                ></item>
 
             <item
                 android:id="@+id/schedule"
                 android:icon="@drawable/path_4"
                 android:title="Schedule"></item>
 
-            <item
-                android:id="@+id/live_updates"
-                android:icon="@drawable/path_5"
-                android:title="Live Updates"></item>
 
             <item
                 android:id="@+id/map"
@@ -23,7 +24,7 @@
                 android:title="Map"></item>
         </menu>
     </item>
-
+<br></br>
     <item android:title="">
         <menu>
             <item
