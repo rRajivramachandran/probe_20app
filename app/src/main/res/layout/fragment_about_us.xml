@@ -97,23 +97,25 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/linkedin"></ImageView>
 
             <ImageView
                 android:id="@+id/aboutUS_Img3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/medium"></ImageView>
+                android:background="@drawable/instanew"></ImageView>
 
             <ImageView
                 android:id="@+id/aboutUS_Img4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+
                 android:layout_marginRight="32dp"
                 android:background="@drawable/path_19"></ImageView>
 

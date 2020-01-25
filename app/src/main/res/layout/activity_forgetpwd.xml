@@ -41,7 +41,7 @@
                 android:imeOptions="actionNext"
                 android:layout_marginTop="50dp"
                 android:focusedByDefault="false"
-                android:hint="@string/ProbeID"
+                android:hint="@string/email"
                 android:nextFocusForward="@+id/pwd_text"
                 android:id="@+id/id_txt"
                 android:inputType="text"
@@ -63,9 +63,15 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/roundcornerbutton"
                 android:padding="4dp"
+                android:id="@+id/changebutton"
                 android:onClick="forgetpwdentry"
                 android:text="Change"
                 android:textColor="#000000" />
-
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/progbar"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"></ProgressBar>
     </LinearLayout>
 </ScrollView>

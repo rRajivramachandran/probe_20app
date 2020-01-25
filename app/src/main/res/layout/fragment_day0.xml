@@ -3,17 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".schedule.Day0"
+    tools:context=".schedule.Day1"
     android:orientation="vertical"
     android:background="@drawable/rectangle1">
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/prog0"
+        android:layout_gravity="center">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    </ProgressBar>
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Day 0"
-        android:textSize="64dp"
-        android:textColor="@color/white"
-        android:gravity="center"/>
+        android:id="@+id/rec_cards"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!-- TODO: Update blank fragment layout -->
+
 
 </LinearLayout>
