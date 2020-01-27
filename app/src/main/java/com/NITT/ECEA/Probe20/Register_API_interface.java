@@ -25,7 +25,7 @@ public interface Register_API_interface {
                       @Field("password") String pwd,
                       Callback<login_pojo> callback);
 
-    @GET("/events")
+    @GET("/schedule")
     public void getevents(
                       Callback<schedule_pojo> callback);
     @FormUrlEncoded

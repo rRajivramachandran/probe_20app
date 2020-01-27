@@ -63,9 +63,9 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffba3d" />
+                                      <entry key="backgroundColor" value="2ea6a4" />
                                       <entry key="foregroundImage" value="$PROJECT_DIR$/src/main/res/drawable-hdpi/logo.png" />
-                                      <entry key="outputName" value="ic_launcher_round" />
+                                      <entry key="outputName" value="ic_launcher_round_final" />
                                     </map>
                                   </option>
                                 </PersistentState>

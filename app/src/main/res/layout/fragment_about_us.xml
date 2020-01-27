@@ -108,7 +108,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/instanew"></ImageView>
+                android:background="@drawable/instagram"></ImageView>
 
             <ImageView
                 android:id="@+id/aboutUS_Img4"

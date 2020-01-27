@@ -10,28 +10,26 @@ public class schedule_list_element {
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("max_count")
-    @Expose
-    private Integer maxCount;
-    @SerializedName("event_start_time")
+
+    @SerializedName("start_time")
     @Expose
     private Object eventStartTime;
-    @SerializedName("event_end_time")
+    @SerializedName("end_time")
     @Expose
     private Object eventEndTime;
-    @SerializedName("event_date")
+    @SerializedName("date")
     @Expose
     private Object eventDate;
-    @SerializedName("event_venue")
+    @SerializedName("venue")
     @Expose
     private Object eventVenue;
-    @SerializedName("event_desc")
+    @SerializedName("desc")
     @Expose
     private Object eventDesc;
-    @SerializedName("event_contact_name")
+    @SerializedName("contact_name")
     @Expose
     private Object eventContactName;
-    @SerializedName("event_contact")
+    @SerializedName("contact")
     @Expose
     private Object eventContact;
     @SerializedName("created_at")
@@ -40,12 +38,19 @@ public class schedule_list_element {
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
-    @SerializedName("event_day")
+    @SerializedName("type")
+    @Expose
+    private String type;
+    @SerializedName("day")
     @Expose
     private Integer eventDay;
 
     public Integer getId() {
         return id;
+    }
+    public String gettype(){return type;}
+    public void settype(String t){
+        this.type=t;
     }
 
     public void setId(Integer id) {
@@ -60,13 +65,7 @@ public class schedule_list_element {
         this.name = name;
     }
 
-    public Integer getMaxCount() {
-        return maxCount;
-    }
 
-    public void setMaxCount(Integer maxCount) {
-        this.maxCount = maxCount;
-    }
 
     public Object getEventStartTime() {
         return eventStartTime;
